@@ -1,0 +1,27 @@
+<ul>
+    <li *ngFor="let val of users">
+        <div *ngIf="val.isDeleted else elseBlock">
+        <div class="card hello" style="width: 400px; border: 1px solid rgb(246, 65, 65);">
+            <h4 class="card-title">{{val.firstName}} {{val.lastName}}</h4>
+            <a (click)="show(val)" class="btn btn-primary stretched-link">Details</a>
+          </div>
+        </div>
+     <ng-template #elseBlock>
+        <div class="card hello" style="width: 400px; border: 1px solid green;">
+            <h4 class="card-title">{{val.firstName}} {{val.lastName}}</h4>
+            <a (click)="show(val)" class="btn btn-primary stretched-link">Details</a>
+          </div>
+     </ng-template>
+     <div class="block" *ngIf="val.showD">
+      <div class="card det" style="width: 30%;">
+        <div class="card-body">
+          <h5 class="card-title">{{val.firstName}} {{val.lastName}}</h5>
+          <p class="card-text">LoginId : &nbsp; {{val.login}}</p>
+          <p class="card-text">First Name : &nbsp; {{val.firstName}}</p>
+          <p class="card-text">Last Name : &nbsp; {{val.lastName}}</p>
+          <p class="card-text">age : &nbsp; {{val.age}}</p>
+        </div>
+      </div>
+    </div>
+    </li>
+</ul>

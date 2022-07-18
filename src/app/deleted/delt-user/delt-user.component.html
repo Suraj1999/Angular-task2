@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let val of users">
+        <div *ngIf="val.isDeleted == true">
+            <div class="card">
+                <h4 class="card-title">{{val.firstName}} {{val.lastName}}</h4>
+                <a (click)="active(val)" class="btn btn-primary stretched-link">Activate</a>
+              </div>
+        </div>
+    </li>
+</ul>
