@@ -1,0 +1,25 @@
+.hello{
+    margin: 3% 5%;
+    padding: 5%
+}
+ul{
+    list-style-type: none;
+}
+a{
+    width: 25%;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;  
+}
+.det{
+    position : absolute;
+    right: 15%;
+    top: 15%;
+    width: 45%;
+    height: 45%;
+
+}
+
+
+
+
